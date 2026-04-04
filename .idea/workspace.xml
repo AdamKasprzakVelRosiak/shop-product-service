@@ -4,13 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2c5b3eb-8e5b-4d04-b588-45c8c7fbee5c" name="Changes" comment="">
+    <list default="true" id="d2c5b3eb-8e5b-4d04-b588-45c8c7fbee5c" name="Changes" comment="update">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/product/controller/ProductConfigurationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/product/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/product/mapper/ProductConfigurationMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/product/model/ProductConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/product/model/ProductDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/product/repository/ProductConfigurationRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/product/repository/ProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/product/service/ProductConfigurationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shop/product/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/001-create-product-table.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/001-create-product-table.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shop/product/ProductType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shop/product/ProductType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shop/product/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shop/product/model/Product.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-master.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-master.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db/changelog/001-create-product-table.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db/changelog/001-create-product-table.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/shop/product/model/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shop/product/model/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db/changelog/db.changelog-master.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db/changelog/db.changelog-master.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,13 +30,15 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="23" />
+    <option name="cachedIndexableFilesCount" value="45" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Record" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -62,18 +76,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "Spring Boot.ShopProductServiceApplication.executor": "Run",
-    "git-widget-placeholder": "feature/product-domain",
-    "kotlin-language-version-configured": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Maven.product-service [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.product-service [validate].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.ShopProductServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/create-product&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
+    ]
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="shop-product-service" />
@@ -121,6 +143,38 @@
       <option name="presentableId" value="Default" />
       <updated>1774697971488</updated>
     </task>
+    <task id="LOCAL-00001" summary="update">
+      <option name="closed" value="true" />
+      <created>1774887848150</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1774887848150</updated>
+    </task>
+    <task id="LOCAL-00002" summary="update">
+      <option name="closed" value="true" />
+      <created>1774887856847</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1774887856847</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
 </project>

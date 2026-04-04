@@ -6,6 +6,14 @@
         http://www.liquibase.org/xml/ns/dbchangelog
         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
 
+    <include file="db/changelog/000-create-product-schema.xml"/>
     <include file="db/changelog/001-create-product-table.xml"/>
+    <include file="db/changelog/002-rename-is-available-column.xml"/>
+    <include file="db/changelog/003-seed-products.xml"/>
+    <include file="db/changelog/004-create-product-config-tables.xml"/>
+    <include file="db/changelog/005-seed-product-configs.xml"/>
+    <include file="db/changelog/006-create-product-configuration.xml"/>
+    <include file="db/changelog/007-drop-legacy-config-tables.xml"/>
+    <include file="db/changelog/008-seed-product-configuration.xml"/>
 
 </databaseChangeLog>

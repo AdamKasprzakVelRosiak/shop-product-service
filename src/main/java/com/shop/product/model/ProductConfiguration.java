@@ -1,17 +1,15 @@
 package com.shop.product.model;
 
-import com.shop.product.ProductType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.Table;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -22,10 +20,9 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Entity
-@Table(name = "products", schema = "product")
+@Table(name = "product_configuration", schema = "product_configuration")
 @Data
-public class Product {
-
+public class ProductConfiguration {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -45,22 +42,23 @@ public class Product {
     private String model;
 
     @NotNull
-    @Enumerated(EnumType.STRING)
-    private ProductType type;
+    private String type;
 
     @NotNull
     @Column(name = "is_available")
     private Boolean isAvailable;
 
-    @ManyToMany
-    @JoinTable(
-            schema = "product",
-            name = "products_producsts_configuration",
-            joinColumns = @JoinColumn(name = "product_id"),
-            inverseJoinColumns = @JoinColumn(name = "product_configuration_id")
-    )
+    @Column(name = "product_id")
+    private Long productId;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "product_id", insertable = false, updatable = false)
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
-    private Set<ProductConfiguration> configurations = new HashSet<>();
+    private Product product;
 
+    @ManyToMany(mappedBy = "configurations")
+    @ToString.Exclude
+    @EqualsAndHashCode.Exclude
+    private Set<Product> products = new HashSet<>();
 }
